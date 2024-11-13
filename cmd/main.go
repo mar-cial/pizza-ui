@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -16,8 +17,10 @@ var (
 func main() {
 	port := os.Getenv("UI_PORT")
 	if port == "" {
-		log.Fatalln(ErrBadPort)
+		port = "8080"
 	}
+
+	port = fmt.Sprintf(":%s", port)
 
 	mux := http.NewServeMux()
 
