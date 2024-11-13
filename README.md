@@ -1,4 +1,3 @@
-```markdown
 # Pizza-UI
 
 **Pizza-UI** is a reusable microservice for creating and serving UI components, leveraging [Templ](https://github.com/benbjohnson/templ) to generate templates. This project provides a server running on a specified port via the `UI_PORT` environment variable, offering a customizable user interface setup for other microservices, such as `auth`, `orders`, and more.
@@ -22,7 +21,6 @@
 ```bash
 git clone https://github.com/username/pizza-ui.git
 cd pizza-ui
-```
 
 ### 2. Initial Configuration
 
@@ -84,6 +82,4 @@ For testing, use:
 
 ```bash
 go test ./...
-```
-
 ```
