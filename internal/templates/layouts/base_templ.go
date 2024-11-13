@@ -35,7 +35,7 @@ func Base() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html><head><title>Food</title><link rel=\"stylesheet\" href=\"https://unpkg.com/tailwindcss@3.4.14/src/css/preflight.css\"></head>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<!doctype html><html><head><title>UI Microservice</title><link rel=\"stylesheet\" href=\"https://unpkg.com/tailwindcss@3.4.14/src/css/preflight.css\"></head>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
