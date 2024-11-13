@@ -1,0 +1,21 @@
+package pages
+
+import (
+	"github.com/mar-cial/food-ui/internal/templates/components"
+	"github.com/mar-cial/food-ui/internal/templates/layouts"
+)
+
+css main() {
+	padding: 2rem;
+}
+
+templ HomePage() {
+	@layouts.Base() {
+		<main class={ main() }>
+			@components.PageHeader("Home")
+			<section>
+				<p>Start building.</p>
+			</section>
+		</main>
+	}
+}

@@ -1,0 +1,11 @@
+package components
+
+css pageTitle() {
+	font-size: 2rem;
+}
+
+templ PageHeader(title string) {
+	<header>
+		<h1 class={ pageTitle() }>{ title }</h1>
+	</header>
+}
