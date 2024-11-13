@@ -10,6 +10,7 @@ import (
 
 var (
 	ErrBadPort = errors.New("port variable needs to be set")
+	ErrBadName = errors.New("")
 )
 
 type envConfig struct {
@@ -18,10 +19,21 @@ type envConfig struct {
 func (e *envConfig) GetPort() (string, error) {
 	port := os.Getenv("UI_PORT")
 	if port == "" {
-		port = "8080"
+		return "", ErrBadPort
 	}
 
-	return fmt.Sprintf(":%s", port), nil
+	port = fmt.Sprintf(":%s", port)
+
+	return port, nil
+}
+
+func (e *envConfig) GetProjectName() (string, error) {
+	projectName := os.Getenv("PROJECT_NAME")
+	if projectName == "" {
+		return "", ErrBadName
+	}
+
+	return projectName, nil
 }
 
 func NewEnvConfig() ports.Config {
