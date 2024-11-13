@@ -2,11 +2,10 @@ package main
 
 import (
 	"errors"
-	"fmt"
 	"log"
 	"net/http"
-	"os"
 
+	"github.com/mar-cial/food-ui/internal/adapters"
 	"github.com/mar-cial/food-ui/internal/handlers"
 )
 
@@ -15,26 +14,20 @@ var (
 )
 
 func main() {
-	port := os.Getenv("UI_PORT")
-	if port == "" {
-		port = "8080"
+	config := adapters.NewEnvConfig()
+	port, err := config.GetPort()
+	if err != nil {
+		log.Fatal(ErrBadPort.Error())
 	}
-
-	port = fmt.Sprintf(":%s", port)
 
 	mux := http.NewServeMux()
 
 	pageHandler := handlers.NewPagesHandler()
 
-	mux.HandleFunc("/", pageHandler.Homepage)
+	mux.HandleFunc("GET /", pageHandler.Homepage)
 
-	server := &http.Server{
-		Addr:    port,
-		Handler: mux,
-	}
-
-	log.Printf("UI server running on port %s\n", server.Addr)
-	if err := server.ListenAndServe(); err != nil {
-		log.Fatalln(err)
+	server := adapters.NewHTTPServer(port, mux)
+	if err := server.Start(); err != nil {
+		log.Fatalf("Server failed: %v", err)
 	}
 }
