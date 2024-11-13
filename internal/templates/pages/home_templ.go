@@ -12,8 +12,8 @@ import "bytes"
 import "strings"
 
 import (
-	"github.com/mar-cial/food-ui/internal/templates/components"
-	"github.com/mar-cial/food-ui/internal/templates/layouts"
+	"github.com/mar-cial/pizza-ui/internal/templates/components"
+	"github.com/mar-cial/pizza-ui/internal/templates/layouts"
 )
 
 func main() templ.CSSClass {

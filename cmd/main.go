@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/mar-cial/food-ui/internal/adapters"
-	"github.com/mar-cial/food-ui/internal/handlers"
+	"github.com/mar-cial/pizza-ui/internal/adapters"
+	"github.com/mar-cial/pizza-ui/internal/handlers"
 )
 
 var (

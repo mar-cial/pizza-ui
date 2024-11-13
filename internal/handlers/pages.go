@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/mar-cial/food-ui/internal/templates/pages"
+	"github.com/mar-cial/pizza-ui/internal/templates/pages"
 )
 
 type pagesHandler struct {

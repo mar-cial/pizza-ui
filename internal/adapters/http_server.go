@@ -3,7 +3,7 @@ package adapters
 import (
 	"net/http"
 
-	"github.com/mar-cial/food-ui/internal/ports"
+	"github.com/mar-cial/pizza-ui/internal/ports"
 )
 
 type httpServer struct {

@@ -1,4 +1,4 @@
-module github.com/mar-cial/food-ui
+module github.com/mar-cial/pizza-ui
 
 go 1.23.2
 

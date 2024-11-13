@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mar-cial/food-ui/internal/ports"
+	"github.com/mar-cial/pizza-ui/internal/ports"
 )
 
 var (
